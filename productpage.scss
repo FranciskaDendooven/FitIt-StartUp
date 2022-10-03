@@ -1,0 +1,85 @@
+@use 'style.scss';
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.carousel {
+  grid-column: span 4;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  vertical-align: middle;
+  .mySlides {
+    display: none;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+    contain: content;
+    .text {
+      color: #f2f2f2;
+      font-size: 2.5vw;
+      text-shadow: 2px 2px 3px #272525;
+      padding: 50px 1px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+}
+  
+.section-1 {
+  grid-column: span 4;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow-wrap:normal;
+  width: 100%;
+  justify-content:center;
+  .card {
+    width: 350px;
+    position: relative;
+    box-shadow: 0 4px 10px 5px rgba(68, 65, 58, 0.2);
+    border-radius: 5%;
+    margin: 20px 10px;
+    padding: 20px;
+    text-align: center;
+    .link {
+      position: relative;
+    }
+    h1 {
+      color: aliceblue;
+      text-shadow: 2px 2px 3px #272525;
+      text-transform: uppercase;
+      font-size: x-large;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+    img {
+      width: 100%;
+
+      }
+    }
+  }
+  .card:hover {
+    transform: scale(0.95); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  #mainpic {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  }
+
